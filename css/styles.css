@@ -154,6 +154,8 @@ h4, .h4 {
   }
 }
 
+
+
 h5, .h5 {
   font-size: 1.25rem;
 }
@@ -11042,3 +11044,25 @@ html {
 .copyright {
   background-color: #1a252f;
 }
+
+
+@media (max-width: 1920px){
+  .masthead .masthead-avatar {
+    width: 30rem !important;
+  }
+}
+
+@media (max-width: 1280px){
+  .masthead .masthead-avatar {
+    width: 15rem !important;
+  }
+}
+
+#mainNav {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+
+
+
