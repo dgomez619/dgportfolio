@@ -103,3 +103,15 @@
     z-index: -1;
     color: black;
   }
+
+/* @media(hover :hover) {
+  .cardX:hover {
+    color: rgb(88 199 250 / 100%);
+    transition: color 1s;
+  }
+  .cardX:hover:before, .cardX:hover:after {
+    animation: none;
+    opacity: 0;
+  }
+  
+} */
