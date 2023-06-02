@@ -49,9 +49,9 @@
   
   .cardX::before {
     content: "";
-    width: 104%;
-    height: 102%;
-    border-radius: 8px;
+    width: 102%;
+    height: 100%;
+    border-radius: 0px;
     background-image: linear-gradient(
       var(--rotate)
       , #5ddcff, #3c67e3 43%, #4e00c2);
