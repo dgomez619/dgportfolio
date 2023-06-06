@@ -249,17 +249,21 @@
                 <!-- To make this form functional, sign up at-->
                 <!-- https://startbootstrap.com/solution/contact-forms-->
                 <!-- to get an API token!-->
-                <form id="contactForm" action="https://formsubmit.co/gomez.d@live.com" method="POST" >
+                <form id="contactForm myForm"  onsubmit="openModal()" action="https://formsubmit.co/gomez.d@live.com" method="POST"  >
                     <!-- Name input-->
                     <div class="form-floating mb-3">
                         <input class="form-control" id="name" type="text" placeholder="Enter your name..." required />
                         <label for="name">Full name</label>
-                        <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+
                     </div>
                     <!-- Email address input-->
                     <div class="form-floating mb-3">
                         <input class="form-control" id="email" type="email" placeholder="name@example.com" required />
                         <label for="email">Email address</label>
+
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_subject" value="New Message">
+                        <input type="hidden" name="_next" value="https://dgomez619.github.io/hrathletes/thankyou.html">
                        
                     </div>
                     <!-- Phone number input-->
@@ -270,21 +274,22 @@
                     </div>
                     <!-- Message input-->
                     <div class="form-floating mb-3">
-                        <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required" required></textarea>
+                        <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem"  required></textarea>
                         <label for="message">Message</label>
                         
                     </div>
-                    <!-- Submit success message-->
-                    <!---->
-                    <!-- This is what your users will see when the form-->
-                    <!-- has successfully submitted-->                    
-                    <!-- Submit error message-->
-                    <!---->
-                    <!-- This is what your users will see when there is-->
-                    <!-- an error submitting the form-->
+                   
                     <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
                     <!-- Submit Button-->
                     <button class="btn btn-primary btn-xl " id="submitButton" type="submit">Send</button>
+
+                    <script>
+                        $('#myForm').on('submit', function(e){
+                        $('#myModal').modal('show');
+                        e.preventDefault();
+                        });
+                    </script>
+
                 </form>
             </div>
         </div>
@@ -581,6 +586,25 @@
         </div>
     </div>
 </div>
+
+<!-- FROM MODAL  -->
+<!-- FROM MODAL  -->
+
+<div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+       
+        <div class="modal-body">
+          <p>Thank for exploring my portfolio and contacting me =) talk soon &hellip;</p>
+        </div>
+        
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+<!-- FROM MODAL END  -->
+<!-- FROM MODAL END  -->
+
 <!-- Bootstrap core JS-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 <!-- Core theme JS-->
